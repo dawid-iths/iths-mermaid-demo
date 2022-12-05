@@ -13,9 +13,10 @@ sequenceDiagram;
     Bankomat->>+BankSystem: Verify pincode!;
     
     BankSystem-->>-Bankomat: Response true / false!;
-    deactivate Bankomat;
+    
     alt false;
         Bankomat-->>+User: Not a valid pin!;
+        deactivate Bankomat;
         User->>+Bankomat: press cancel button;
         Bankomat-->>+User: Card eject!;
     end;
