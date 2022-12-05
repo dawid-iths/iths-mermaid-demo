@@ -3,8 +3,8 @@
 ```mermaid
 sequenceDiagram;
     Actor User;
-    activate Bankomat;
         User->>+Bankomat: Put in Card;
+        
         Bankomat-->>+User: Type in your Pincode!;
         User->>+Bankomat: Set pincode!;
     
@@ -13,7 +13,6 @@ sequenceDiagram;
     activate BankSystem;
         BankSystem-->>+Bankomat: Response true / false!;
     deactivate BankSystem;
-    deactivate Bankomat;
     
     alt false;
         Bankomat-->>+User: Not a valid pin!;
