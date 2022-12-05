@@ -15,7 +15,7 @@ sequenceDiagram;
         alt false;
             Bankomat-->>+User: Not a valid pin!;
             User->>+Bankomat: press cancel button;
-            Bankomat-->>+User: Card eject!;
+            Bankomat-->>-User: Card eject!;
         end;
         alt true;
         Bankomat-->>-User: valid pin!;
