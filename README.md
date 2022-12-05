@@ -4,10 +4,9 @@
 sequenceDiagram;
     Actor User;
     activate Bankomat;
-    User->>+Bankomat: Put in Card;
-    
-    Bankomat-->>+User: Type in your Pincode!;
-    User->>+Bankomat: Set pincode!;
+        User->>+Bankomat: Put in Card;
+        Bankomat-->>+User: Type in your Pincode!;
+        User->>+Bankomat: Set pincode!;
     deactivate Bankomat;
     
     Bankomat->>+BankSystem: Verify pincode!;
