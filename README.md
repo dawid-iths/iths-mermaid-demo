@@ -2,5 +2,5 @@
 
 ```mermaid
 sequenceDiagram
-    User->>+Bankomat: Put in Card!
-    User-->>-Bankomat: Need pin!
+    Användare->>+Bankomat: Put in Card!
+    Användare-->>-Bankomat: Need pin!
