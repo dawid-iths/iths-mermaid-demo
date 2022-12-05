@@ -26,8 +26,8 @@ sequenceDiagram;
     activate BankSystem;
     Bankomat-->>+BankSystem: start transaction!;
     BankSystem-->>+Bankomat: Approved!;
-    option log transaction
-        BankSystem-->BankSystem: Log transaction
+    option log transaction;
+        BankSystem-->BankSystem: Log transaction;
     Bankomat-->>+User: $$$$!;
     BankSystem-->>+User: no money!;
     deactivate BankSystem;
