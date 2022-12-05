@@ -10,5 +10,7 @@ sequenceDiagram
     BankSystem-->>+Bankomat: Not a valid pin!
     Bankomat-->>+User: Not a valid pin!
     User->>+Bankomat: cancel!
-    Bankomat-->>+User: Card eject!
+    Bankomat-->>+User: Card eject!;
+    
+
 
