@@ -3,10 +3,12 @@
 ```mermaid
 sequenceDiagram;
     Actor User;
-    User->>+Bankomat: Put in Card;
-    Bankomat-->>+User: Need Pin!;
-    User->>+Bankomat: Set pincode!;
-    Bankomat->>+BankSystem: Verify pincode!;
+    activate Bankomat;
+        User->>+Bankomat: Put in Card;
+        Bankomat-->>+User: Need Pin!;
+        User->>+Bankomat: Set pincode!;
+        Bankomat->>+BankSystem: Verify pincode!;
+    deactivate Bankomat;
     activate BankSystem;
         BankSystem-->>+Bankomat: Response true / false!;
     deactivate BankSystem;
