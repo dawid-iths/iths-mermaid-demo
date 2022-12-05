@@ -7,13 +7,14 @@ sequenceDiagram;
         User->>+Bankomat: Put in Card;
         Bankomat-->>+User: Type in your Pincode!;
         User->>+Bankomat: Set pincode!;
-    deactivate Bankomat;
     
     Bankomat->>+BankSystem: Verify pincode!;
     
     activate BankSystem;
         BankSystem-->>+Bankomat: Response true / false!;
     deactivate BankSystem;
+    deactivate Bankomat;
+    
     alt false;
         Bankomat-->>+User: Not a valid pin!;
         User->>+Bankomat: press cancel button;
