@@ -8,4 +8,6 @@ sequenceDiagram
     Bankomat->>+BankSystem: Check pincode!
     BankSystem->>+Bankomat: Not a valid pin!
     Bankomat->>+User: Not a valid pin!
+    User->>+Bankomat: cancel!
+    Bankomat->>+User: Card eject!
 
