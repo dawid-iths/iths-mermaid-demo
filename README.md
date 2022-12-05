@@ -20,7 +20,7 @@ sequenceDiagram;
         alt true;
         Bankomat-->>+User: Ok!;
     deactivate Bankomat;
-            User->>+Bankomat: Add sum!;
+            User->>-Bankomat: Add sum!;
         end;
         
     activate BankSystem;
