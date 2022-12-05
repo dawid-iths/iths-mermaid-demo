@@ -2,6 +2,6 @@
 
 ```mermaid
 sequenceDiagram
-    User->>+Bankomat: Hello John, how are you?
-    Bankomat->>+User: John, can you hear me?
+    User->>+Bankomat: Put in Card
+    Bankomat->>+User: Need Pin!
 
