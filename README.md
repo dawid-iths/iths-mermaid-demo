@@ -10,6 +10,7 @@ sequenceDiagram;
     activate BankSystem;
     BankSystem-->>+Bankomat: Not a valid pin!;
     deactivate BankSystem;
+    Note over User,BankSystem: A typical interaction;
     Bankomat-->>+User: Not a valid pin!;
     User->>+Bankomat: cancel!;
     Bankomat-->>+User: Card eject!;
