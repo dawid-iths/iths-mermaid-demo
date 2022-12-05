@@ -11,7 +11,6 @@ sequenceDiagram;
         BankSystem-->>+Bankomat: Response true / false!;
     deactivate BankSystem;
     alt false;
-        Note over User,BankSystem: If not valid pin!;
         Bankomat-->>+User: Not a valid pin!;
         User->>+Bankomat: cancel!;
         Bankomat-->>+User: Card eject!;
