@@ -26,9 +26,14 @@ sequenceDiagram;
     activate BankSystem;
     Bankomat-->>+BankSystem: start transaction!;
     BankSystem-->>+Bankomat: Approved!;
-    option log transaction;
-        BankSystem-->BankSystem: Log transaction;
-    end;
+    
+    critical Establish a connection to the DB
+    option Network timeout
+        BankSystem-->BankSystem: Log error
+
+    end
+    
+    
     Bankomat-->>+User: $$$$!;
     BankSystem-->>+User: no money!;
     deactivate BankSystem;
