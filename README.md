@@ -26,5 +26,5 @@ sequenceDiagram;
     Note over Bankomat,BankSystem: No money on account!;
     BankSystem-->>+User: no money!;
     deactivate BankSystem;
-    Bankomat--x+User: Card eject!;
+    Bankomat-->>+User: Card eject!;
     
