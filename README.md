@@ -11,7 +11,6 @@ sequenceDiagram
     User->>+Bankomat: cancel!
     Bankomat->>+User: Card eject!
     
-```mermaid
 sequenceDiagram
     User->>+Bankomat: Put in Card
     Bankomat->>+User: Need Pin!
