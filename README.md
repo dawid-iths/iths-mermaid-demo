@@ -18,9 +18,9 @@ sequenceDiagram;
             Bankomat-->>+User: Card eject!;
         end;
         alt true;
-        Bankomat-->>+User: Ok!;
+        Bankomat-->>-User: valid pin!;
     deactivate Bankomat;
-            User->>-Bankomat: Add sum!;
+            User->>+Bankomat: Add sum!;
         end;
         
     activate BankSystem;
