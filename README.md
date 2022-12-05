@@ -28,9 +28,9 @@ sequenceDiagram;
     Bankomat-->>+BankSystem: start transaction!;
     BankSystem-->>+Bankomat: Approved!;
     
+    critical Logging
     option 
         BankSystem-->BankSystem: Log amount appoved
-
     end
     
     
