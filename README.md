@@ -7,7 +7,7 @@ sequenceDiagram;
     User->>+Bankomat: Put in Card;
     Bankomat-->>-User: Type in your Pincode!;
     User->>+Bankomat: Set pincode!;
-    
+    activate Bankomat;
         Bankomat->>+BankSystem: Verify pincode!;
 
         BankSystem-->>-Bankomat: Response true / false!;
@@ -18,7 +18,8 @@ sequenceDiagram;
             Bankomat-->>+User: Card eject!;
         end;
         alt true;
-        Bankomat-->>-User: Ok!;
+        Bankomat-->>+User: Ok!;
+    deactivate Bankomat;
             User->>+Bankomat: Add sum!;
         end;
         
