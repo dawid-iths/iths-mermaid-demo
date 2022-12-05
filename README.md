@@ -19,7 +19,7 @@ sequenceDiagram;
             Bankomat-->>+User: Card eject!;
         end;
         alt true;
-        Bankomat-->>+User: Ok!;
+        Bankomat-->>-User: Ok!;
     deactivate Bankomat;
             User->>+Bankomat: Add sum!;
         end;
