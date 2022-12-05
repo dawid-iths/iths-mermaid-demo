@@ -25,10 +25,10 @@ sequenceDiagram;
         
     activate BankSystem;
     Bankomat-->>+BankSystem: start transaction!;
-    Note over Bankomat,BankSystem: Enough cash?;
-    BankSystem-->>+Bankomat: yepp!;
-    Bankomat-->>+User: Take my money $$$$!;
-    Note over Bankomat,BankSystem: No money on account!;
+    BankSystem-->>+Bankomat: Approved!;
+    option log transaction
+        BankSystem-->BankSystem: Log transaction
+    Bankomat-->>+User: $$$$!;
     BankSystem-->>+User: no money!;
     deactivate BankSystem;
     Bankomat-->>+User: Card eject!;
