@@ -9,20 +9,21 @@ sequenceDiagram;
     User->>+Bankomat: Set pincode!;
     
     activate Bankomat;
+        Bankomat->>+BankSystem: Verify pincode!;
 
-    Bankomat->>+BankSystem: Verify pincode!;
-    
-    BankSystem-->>-Bankomat: Response true / false!;
-    
-    alt false;
-        Bankomat-->>+User: Not a valid pin!;
-        deactivate Bankomat;
-        User->>+Bankomat: press cancel button;
-        Bankomat-->>+User: Card eject!;
-    end;
-    alt true;
-        User->>+Bankomat: Add sum!;
-    end;
+        BankSystem-->>-Bankomat: Response true / false!;
+
+        alt false;
+            Bankomat-->>+User: Not a valid pin!;
+            User->>+Bankomat: press cancel button;
+            Bankomat-->>+User: Card eject!;
+        end;
+        alt true;
+        Bankomat-->>+User: Ok!;
+    deactivate Bankomat;
+            User->>+Bankomat: Add sum!;
+        end;
+        
     activate BankSystem;
     Bankomat-->>+BankSystem: start transaction!;
     Note over Bankomat,BankSystem: Enough cash?;
