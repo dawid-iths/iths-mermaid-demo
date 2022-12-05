@@ -21,4 +21,5 @@ sequenceDiagram;
     BankSystem-->>+Bankomat: yepp!;
     Bankomat-->>+User: Take my money $$$$!;
     Note over Bankomat,BankSystem: No money on account!;
+    BankSystem-->>+Bankomat: no money!;
     Bankomat-->>+User: Card eject!;
