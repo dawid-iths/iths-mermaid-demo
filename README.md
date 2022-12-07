@@ -1,6 +1,6 @@
 # iths-mermaid-demo
 
-´´´ mermaid
+```mermaid
 sequenceDiagram;
     Actor User;
     
