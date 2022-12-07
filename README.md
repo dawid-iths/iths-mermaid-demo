@@ -40,7 +40,15 @@ sequenceDiagram;
     Bankomat-->>+User: Card eject!;
 ```
  
- ```sequenceDiagram;
-    Actor User;
-    
-    User->>+Bankomat: Put in Card;
+ ```mermaid
+ gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
