@@ -38,4 +38,9 @@ sequenceDiagram;
     BankSystem-->>+User: no money!;
     deactivate BankSystem;
     Bankomat-->>+User: Card eject!;
+ ```
+ 
+ ```sequenceDiagram;
+    Actor User;
     
+    User->>+Bankomat: Put in Card;
